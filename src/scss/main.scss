@@ -6,19 +6,13 @@ AUTHOR:		Your Name Here
 
 TABLE OF CONTENTS:
 
-0. Reset
 1. Main Layout
 2. Content
 
 ==============================================
 */
 
-/* 0. Reset ================================= */
-@import 'reset';
-
-
 /* 1. Main Layout ================================= */
-
 * {
 	box-sizing: border-box;
 }
@@ -27,77 +21,63 @@ body {
 	background: #ccc;
 }
 
-
-
-
-/* 2. Content ================================= */
-
 .content {
 	position: relative;
+	background: white;
+	padding: 50px 30px 50px;
 	font-family: sans-serif;
 	width: 90%;
 	max-width: 500px;
 	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
-	.foreground {
-		position: relative;
-		z-index: 2;
-		transform: translateZ(100px);
-	}
-	.background {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		background: white;
-		z-index: 1;
-		// perspective: 2000px;
-		transition: 0.2s;
-		transform: translateX(20px) perspective(600px) rotateY(15deg);
-	}
-	&:hover .background {
-		transform: translateX(-30px) perspective(600px) rotateY(-15deg);		
-	}
-	.logo {
-		position: absolute;
-		top: -30px;
-		width: 60px;
-		z-index: 2;
-		transform: translateZ(100px);
-		transition: 0.3s;
+}
 
-		&:hover {
-			transform: rotate(-0.4turn)
-		}
-	}
-	h1 {
-		font-weight: 700;
-		font-size: 22pt;
-		margin: 15px 0;
-	}
-	p {
-		color: #777;
-		// margin: 10px 0;
-		line-height: 140%;
-	}
-	p.github {
-		font-size: 0.8em;
-		
-		a {
-			opacity: 0.2;
-			transition: 0.3s;
-			&:hover {
-				opacity: 1;
-				color: red;
-			}
-		}
-	}
-	code {
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		font-size: 0.8em;
-		opacity: 0.2;
-	}
+/* 2. Content ================================= */
+.top-angle {
+	position: absolute;
+	left: -1%;
+	top: -15px;
+	width: 102%;
+	height: 30px;
+	background: #ccc;
+	transform: rotate(-2.2deg);
+}
+
+.bottom-angle {
+	position: absolute;
+	left: -1%;
+	bottom: -15px;
+	width: 102%;
+	height: 30px;
+	background: #ccc;
+	transform: rotate(1.5deg);
+}
+
+.logo {
+	position: absolute;
+	top: -10px;
+	width: 60px;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 22pt;
+	margin: 15px 0;
+}
+
+p {
+	color: #777;
+	line-height: 140%;
+}
+
+p.github {
+	font-size: 0.8em;
+	opacity: 0.2;
+}
+
+code {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 0.8em;
+	opacity: 0.2;
 }
